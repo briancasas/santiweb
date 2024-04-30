@@ -1,8 +1,6 @@
-// main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Navbar from './Navbar';
 import Nosotros from './Nosotros';
 import Galeria from './Galeria';
@@ -15,22 +13,13 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/nosotros">
-            <Nosotros />
-          </Route>
-          <Route path="/galeria">
-            <Galeria />
-          </Route>
-          <Route path="/reservaweb">
-            <ReservaWeb />
-          </Route>
-          <Route path="/contacto">
-            <Contacto />
-          </Route>
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/reservaWeb" element={<ReservaWeb />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </div>
-    </Router>
-  );
+    </Router>  );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
