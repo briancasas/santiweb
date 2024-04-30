@@ -1,10 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import Navbar from './Navbar';
+import Nosotros from './Nosotros';
+import Galeria from './Galeria';
+import ReservaWeb from './ReservaWeb';
+import Contacto from './Contacto';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/nosotros">
+            <Nosotros />
+          </Route>
+          <Route path="/galeria">
+            <Galeria />
+          </Route>
+          <Route path="/reservaweb">
+            <ReservaWeb />
+          </Route>
+          <Route path="/contacto">
+            <Contacto />
+          </Route>
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
