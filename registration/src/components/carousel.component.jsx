@@ -1,4 +1,3 @@
-import { fromJSON } from "postcss";
 import { useEffect } from "react";
 import { useState } from "react";
 import { ChevronLeft , ChevronRight} from "react-feather";
